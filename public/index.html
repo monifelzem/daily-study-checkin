@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Check-in Diário de Estudos</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h1>Check-in Diário de Estudos</h1>
@@ -10,7 +11,30 @@
       <input type="text" id="name" name="name" required /><br />
       <label for="studyTime">Horas de Estudo:</label>
       <input type="number" id="studyTime" name="studyTime" required /><br />
+
+      <h2>Tarefas</h2>
+      <div class="task">
+        <input type="checkbox" id="runTask" name="tasks" value="Correr" />
+        <label for="runTask">Correr</label>
+      </div>
+      <div class="task">
+        <input type="checkbox" id="waterTask" name="tasks" value="Beber Água" />
+        <label for="waterTask">Beber Água</label>
+      </div>
+      <div class="task">
+        <input type="checkbox" id="studyTask" name="tasks" value="Estudar" />
+        <label for="studyTask">Estudar</label>
+      </div>
+
       <button type="submit">Fazer Check-in</button>
     </form>
+
+    <!-- ... (mantenha a parte do formulário) -->
+
+    <h2>Visualizar Check-ins</h2>
+    <div id="chartContainer"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/recharts/2.1.0/recharts.min.js"></script>
+    <script src="chart.js"></script>
   </body>
 </html>
